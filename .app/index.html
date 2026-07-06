@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSAgent</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="app-shell" id="appShell" data-menu="expanded">
+    <aside class="menu-bar" id="menuBar" aria-label="Main menu"></aside>
+
+    <main class="workspace">
+      <header class="topbar">
+        <label class="search-box" aria-label="Search">
+          <svg class="svg-icon" aria-hidden="true" viewBox="0 0 24 24">
+            <circle cx="11" cy="11" r="7"></circle>
+            <path d="m16.5 16.5 4 4"></path>
+          </svg>
+          <input id="globalSearch" type="search" value="" placeholder="Search Course Wiki, Source Files, and citations...">
+        </label>
+
+        <div class="topbar-right">
+          <div class="topbar-context" aria-label="Current class space">
+            <span class="context-chip">CS33</span>
+            <span class="context-title">Lumina Pulse Course Wiki</span>
+          </div>
+
+          <div class="profile-area">
+            <button class="profile-button" id="profileButton" type="button" aria-expanded="false" aria-controls="profileMenu" aria-label="Open user menu">N</button>
+            <div class="profile-menu" id="profileMenu" hidden></div>
+          </div>
+        </div>
+      </header>
+
+      <section class="content" id="content" aria-live="polite"></section>
+    </main>
+  </div>
+
+  <button class="floating-agent" type="button" data-floating-agent aria-label="Open chat">
+    <svg class="svg-icon" aria-hidden="true" viewBox="0 0 24 24">
+      <path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"></path>
+      <path d="M8 9h8"></path>
+      <path d="M8 13h5"></path>
+    </svg>
+  </button>
+
+  <script src="./app.js"></script>
+</body>
+</html>
