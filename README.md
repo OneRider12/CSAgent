@@ -175,6 +175,8 @@ The long-term system should be useful for real study, not just a demo. It should
 
 ## Tracking
 
+Last tracker sync: 2026-07-10.
+
 Current implementation tracking is mirrored between:
 
 - Linear: `WAT-11`, `Working prototype demo`
