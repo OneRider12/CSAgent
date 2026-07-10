@@ -27,6 +27,7 @@ pnpm-debug.log*
 !.env.example
 !.env.sample
 *.local
+.app/config.local.js
 
 # Caches
 .cache/
