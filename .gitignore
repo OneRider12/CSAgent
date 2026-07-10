@@ -27,6 +27,7 @@ pnpm-debug.log*
 !.env.example
 !.env.sample
 *.local
+.app/config.local.js
 
 # Caches
 .cache/
@@ -44,3 +45,7 @@ Thumbs.db
 # Internal resources
 raw stuff/
 ingested/
+
+# Local development knowledge base
+REPO.md
+wiki/
