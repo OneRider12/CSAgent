@@ -35,6 +35,9 @@ pnpm-debug.log*
 .turbo/
 .eslintcache
 *.tsbuildinfo
+__pycache__/
+*.py[cod]
+.pytest_cache/
 
 # Editors and OS files
 .vscode/

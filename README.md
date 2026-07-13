@@ -8,7 +8,7 @@ The product direction is simple: students upload slides, notes, documents, image
 
 CSAgent is in the prototype stage.
 
-The repository currently contains the Project Wiki and a committed normal-user static app shell under `.app/`. It is not a production deployment yet.
+The repository currently contains a committed normal-user static app shell under `.app/` and a FastAPI service branch named `backend`. It is not a production deployment yet.
 
 The current prototype focuses on making the product shape testable:
 
@@ -18,6 +18,7 @@ The current prototype focuses on making the product shape testable:
 - Source File and processing-status concepts
 - Draft Wiki Note and Publish Review concepts
 - cited Agent chat behavior
+- FastAPI-backed, evidence-grounded Agent Chat with persisted conversations and access-aware citations
 - Private Group concepts
 - local prototype verification through Node tests where prototype tests exist
 
@@ -132,8 +133,9 @@ The public repo currently includes:
 
 - a normal-user app shell under `.app/`
 - split app assets for HTML, JavaScript, Tailwind input, and generated CSS
+- a FastAPI Agent Chat backend on the `backend` branch
 - tests for app shell structure and expected prototype boundaries
-- Project Wiki documentation under `wiki/`
+- local-only Project Wiki tooling via ignored `REPO.md` and `wiki/`
 
 The prototype is meant to validate product shape, user flows, and domain language before the production architecture is finalized.
 
@@ -145,7 +147,7 @@ The following are not complete production features yet:
 - production OCR/extraction
 - persistent Draft Wiki Note review workflow
 - production Publish Review
-- full RAG chat
+- provider-backed RAG generation (the initial Agent Chat uses PostgreSQL full-text retrieval and deterministic cited extracts)
 - graph view implementation
 - Course export packaging
 - production Chula identity verification
@@ -175,12 +177,20 @@ The long-term system should be useful for real study, not just a demo. It should
 
 ## Tracking
 
-Last tracker sync: 2026-07-10.
+Last tracker sync: 2026-07-13.
 
 Current implementation tracking is mirrored between:
 
 - Linear: `WAT-11`, `Working prototype demo`
+- Linear: `WAT-13`, `Initialize FastAPI product API`
 - GitHub: [Issue #1: Deliver runnable pilot prototype demo](https://github.com/OneRider12/CSAgent/issues/1)
+
+Active branches:
+
+- `main`: stable/public branch
+- `development`: integration branch before `main`
+- `codex/app-tailwind-stage`: app shell working branch
+- `backend`: FastAPI service branch
 
 Linear remains the detailed product planning source. GitHub tracks repo-facing implementation work.
 
